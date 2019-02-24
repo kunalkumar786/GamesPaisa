@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_upcoming"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_10"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="4dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <VideoView
+                android:id="@+id/thumbnail_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_cover_height_small"
+                android:paddingLeft="5dp"
+                android:visibility="gone"
+                android:paddingRight="5dp"/>
+            <com.marcinmoskala.videoplayview.VideoPlayView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_cover_height_small"
+                 />
+
+
+
+
+
+            <!-- <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_cover_height_small"
+                android:src="@drawable/logo"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY" />-->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_below="@id/thumbnail"
+                android:paddingLeft="@dimen/album_title_padding_small"
+                android:paddingRight="@dimen/album_title_padding"
+
+                android:text="Title"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/album_title_padding"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/album_title" />
+
+            <TextView
+                android:id="@+id/tv_description_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="@dimen/dim_5"
+                android:maxLength="50"
+                android:paddingLeft="@dimen/album_title_padding_small"
+                android:paddingBottom="@dimen/dim_5"
+                android:singleLine="true"
+                android:text="description"
+                android:textColor="#000000" />
+
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_description_value"
+                android:layout_marginTop="@dimen/album_title_padding_small"
+                android:layout_marginRight="@dimen/dim_2"
+                android:paddingLeft="@dimen/album_title_padding_small"
+                android:paddingRight="@dimen/album_title_padding_small"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:text="time"
+                android:textColor="#000000"
+                android:textSize="@dimen/songs_count" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_below="@+id/count"
+                android:id="@+id/ll_entry_fee_value"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dim_5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:paddingLeft="@dimen/album_title_padding_small"
+                    android:id="@+id/tv_entery_fee_title"
+                    android:text="Entery Fee:"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_entery_fee_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="50"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/ll_prize"
+                android:visibility="gone"
+                android:layout_below="@+id/ll_entry_fee_value"
+                android:layout_marginTop="@dimen/dim_5"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_win_prize_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/album_title_padding_small"
+                    android:text="Win Prize:"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_win_prize_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:gravity="right"
+                    android:text="50"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/ll_extra"
+                android:visibility="gone"
+                android:layout_below="@+id/ll_prize"
+                android:layout_marginTop="@dimen/dim_5"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:id="@+id/tv_win_extra_title"
+                    android:text="Extra:"
+                    android:paddingLeft="@dimen/album_title_padding_small"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_win_extra_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="50"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/overflow"
+                android:layout_width="@dimen/ic_album_overflow_width"
+                android:layout_height="@dimen/ic_album_overflow_height"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/thumbnail"
+                android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_option" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

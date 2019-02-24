@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="ExtraTranslation">GamesPaisa</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_wallet_balance">Wallet Balance</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="Rs">10 \u20B9</string>
+    <string name="event_total">Joined</string>
+    <string name="event_total_value">1</string>
+    <string name="menu_title"></string>
+    <string name="oops_title_upcoming">No UpComing Event Avialable</string>
+    <string name="oops_title_on_going">No OnGoing Event Avialable</string>
+    <string name="no_notifiaction">No Notifications Avialable</string>
+    <string name="oops_title_past">No Past Event Avialable</string>
+    <string name="about_us" >Since 1999, Internet Marketing Ninjas has specialized in
+        developing content campaigns that earn natural
+        contact our highly experienced team to setup a review session today.</string>
+
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Delete</string>
+    <string name="Rs_symbol">\u20B9</string>
+
+    <string name="event_amount_won">Won</string>
+    <string name="event_title">Event</string>
+    <string name="event_amount_won_value">10</string>
+    <string name="tv_thanks_title">Thank you for your order.</string>
+        <string name="tv_thanks_home">Continue home</string>
+        <string name="tv_thanks_order">Track my order</string>
+    <string name="FACEBOOK_APP_ID">2231996193528196</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">4c7f061106d255cc9a381e92d1eb6393</string>
+    <string name="ak_login_protocol_scheme">ak601260700266485</string>
+    <string name="login_success">login success</string>
+    <string name="login">LOGIN</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="go">GO</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="contact">Phone No.</string>
+    <string name="city">City</string>
+    <string name="contact_admin_email">admin@gamespaisa.com</string>
+    <string name="contact_contact_number">7989259569</string>
+    <string name="contact_contact_address">Visakhapatnam, Andhrapradesh.India</string>
+    <string name="about_us_text"><![CDATA[<b>GamesPaisa</b> is an Ultimate Destination to all your eSports Games and events. \n \n
+GamesPaisa is an Online Portal which Offers real money as Rewards and Unlimited Entertainment for Participating and Playing Games Online and offline. Currently it supports a Popular and Trending Games \n
+Why only play for fun? While you can also earn! This is what we brought for you We just made for you and developed by a young mind from India! \n \n
+You might be addicted to lot of games but just think what if you can start making money or living by Playing Mobile Games and events? Well, this is what GamesPaisa Offers you. Users can participate in the upcoming eSports games/tournaments and Win Amazing Prizes and Rewards. \n\n
+Why only play for fun? While you can also earn! This is what we brought for you .Currently, the platform has got support for Trending Games / events. Users can join Custom Rooms, and Get Real Money as Rewards. You can join as solo or a team to play and win Rewards for winners and many more. Sounds great?? Give it a try and win Real Money]]>
+</string>
+    <string name="user_id">UserId</string>
+    <string name="next">NEXT</string>
+    <string name="register">REGISTER</string>
+
+</resources>

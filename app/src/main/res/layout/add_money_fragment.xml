@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">-->
+
+
+
+<EditText
+    android:layout_width="match_parent"
+    android:id="@+id/et_amount_value"
+    android:layout_marginBottom="@dimen/dim_10"
+    android:layout_marginTop="@dimen/dim_20"
+    android:layout_marginLeft="@dimen/dim_10"
+    android:layout_marginRight="@dimen/dim_10"
+    android:text="20"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints" />
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim_40"
+    android:text="Add Money"
+    android:textColor="#ffffff"
+    android:layout_marginLeft="@dimen/dim_10"
+    android:layout_marginRight="@dimen/dim_10"
+    android:layout_marginTop="@dimen/dim_30"
+    android:layout_marginBottom="@dimen/dim_10"
+
+    android:background="@color/colorPrimary"
+    android:layout_centerInParent="true"
+    android:id="@+id/bt_add_money"
+    tools:ignore="MissingConstraints" />
+
+
+ <!--    </RelativeLayout>
+    </ScrollView>-->
+
+</RelativeLayout>

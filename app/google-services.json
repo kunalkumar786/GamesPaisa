@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "581666155743",
+    "firebase_url": "https://gamespaisa.firebaseio.com",
+    "project_id": "gamespaisa",
+    "storage_bucket": "gamespaisa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581666155743:android:33d5dfcbdb76f5ab",
+        "android_client_info": {
+          "package_name": "prasad.com.gamespaisa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581666155743-oieq6e5k4n1tl2s6sl0bf3blg4uqbd19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "prasad.com.gamespaisa",
+            "certificate_hash": "e97e9bf6a1d7b8d82278b9a28b90dac4d732aa44"
+          }
+        },
+        {
+          "client_id": "581666155743-s7i3p2ti6qsvv4icpsekue7nnvivnpcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb-SQ9CxLABmzYOcZBh-lplosJz6-ocog"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581666155743-s7i3p2ti6qsvv4icpsekue7nnvivnpcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

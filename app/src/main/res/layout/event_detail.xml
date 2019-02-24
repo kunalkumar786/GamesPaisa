@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/dim_10"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/rl_color_header"
+    android:visibility="gone"
+    android:background="@color/colorPrimary"
+    android:layout_height="@dimen/dim_55">
+    <ImageView
+        android:layout_width="@dimen/dim_40"
+        android:id="@+id/iv_back_button"
+
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_height="@dimen/dim_40" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_header_title"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="@dimen/dim_20"
+        android:layout_toRightOf="@+id/iv_back_button"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_55"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_cover_height_detail_large"
+                android:src="@drawable/logo"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY" />
+ </RelativeLayout>
+ </android.support.v7.widget.CardView>
+   <!-- <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/card_view"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+
+
+    <!--<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:elevation="3dp"
+
+    android:layout_margin="@dimen/dim_10"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="4dp"
+    android:layout_height="match_parent">-->
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_marginBottom="@dimen/dim_10"
+     android:id="@+id/rl_content"
+     android:layout_below="@+id/card_view"
+     android:layout_height="wrap_content">
+
+     <TextView
+         android:id="@+id/title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingLeft="@dimen/album_title_padding"
+         android:paddingTop="@dimen/album_title_padding"
+         android:paddingRight="@dimen/album_title_padding"
+         android:textColor="@color/colorPrimary"
+         android:textSize="@dimen/album_title_large"
+         android:textStyle="bold" />
+
+
+     <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+         android:textColor="#000000"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+         android:textColor="#000000"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+         android:textColor="#000000"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+         android:textColor="#000000"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_win_prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_extra"
+         android:textColor="#000000"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:gravity="right"
+         android:layout_below="@+id/tv_price"
+        android:layout_toRightOf="@+id/tv_extra"
+         android:layout_marginRight="@dimen/dim_10"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+        android:id="@+id/tv_total_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:gravity="right"
+         android:layout_toRightOf="@+id/tv_win_prize"
+        android:layout_below="@+id/tv_extra"
+         android:layout_marginRight="@dimen/dim_10"
+        android:paddingBottom="@dimen/songs_count_padding_bottom"
+        android:paddingLeft="@dimen/album_title_padding"
+        android:paddingRight="@dimen/album_title_padding"
+        android:textSize="@dimen/songs_count_large" />
+     <TextView
+         android:id="@+id/tv_description"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:layout_below="@+id/tv_total_available"
+         android:layout_marginTop="@dimen/dim_10"
+         android:paddingBottom="@dimen/songs_count_padding_bottom"
+         android:paddingLeft="@dimen/album_title_padding"
+         android:paddingRight="@dimen/album_title_padding"
+         android:textSize="@dimen/songs_count_large" />
+
+ </RelativeLayout>
+
+
+<!--</android.support.v7.widget.CardView>
+        </ScrollView>-->
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_footer"
+    android:layout_below="@+id/rl_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="bottom"
+    android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/tv_view_participant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_above="@+id/tv_update"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/dim_10"
+            android:text="View Participant"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+    <Button
+            android:id="@+id/tv_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/dim_10"
+            android:text="Buy"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+</LinearLayout>
+    <!--</android.support.design.widget.CoordinatorLayout>-->
+
+   </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
