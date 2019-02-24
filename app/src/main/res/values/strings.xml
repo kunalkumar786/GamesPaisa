@@ -15,6 +15,7 @@
     <string name="oops_title_on_going">No OnGoing Event Avialable</string>
     <string name="no_notifiaction">No Notifications Avialable</string>
     <string name="oops_title_past">No Past Event Avialable</string>
+    <string name="with_draw_to_paytm_wallet">Withdraw to Paytm Wallet</string>
     <string name="about_us" >Since 1999, Internet Marketing Ninjas has specialized in
         developing content campaigns that earn natural
         contact our highly experienced team to setup a review session today.</string>
@@ -42,6 +43,8 @@
     <string name="email_address">Email Address</string>
     <string name="contact">Phone No.</string>
     <string name="city">City</string>
+    <string name="add_to_wallet">Add Money to Wallet</string>
+    <string name="date">time and date</string>
     <string name="contact_admin_email">admin@gamespaisa.com</string>
     <string name="contact_contact_number">7989259569</string>
     <string name="contact_contact_address">Visakhapatnam, Andhrapradesh.India</string>

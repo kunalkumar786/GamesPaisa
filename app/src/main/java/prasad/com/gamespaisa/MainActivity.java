@@ -343,9 +343,14 @@ public class MainActivity extends AppCompatActivity
         final String fm_name = fragment.getClass().getSimpleName();
         if(fm_name.contentEquals("EventDetailFragment")) {
             fragment.onActivityResult(requestCode, resultCode, data);
-        }if(fm_name.contentEquals("AddMoneyFragment")) {
+        }
+        /*if(fm_name.contentEquals("AddMoneyFragment")) {
             fragment.onActivityResult(requestCode, resultCode, data);
-        }else if(fm_name.contentEquals("ProfileFragment")){
+        }*/
+        else if(fm_name.contentEquals("WalletFragment")){
+            fragment.onActivityResult(requestCode,resultCode,data);
+        }
+        else if(fm_name.contentEquals("ProfileFragment")){
             fragment.onActivityResult(requestCode, resultCode, data);
         }
 

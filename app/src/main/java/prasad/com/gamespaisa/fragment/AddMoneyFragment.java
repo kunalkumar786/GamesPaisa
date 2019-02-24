@@ -29,6 +29,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 import prasad.com.gamespaisa.R;
+import prasad.com.gamespaisa.interfac.UpdateWalletBalance;
 import prasad.com.gamespaisa.model.User;
 import prasad.com.gamespaisa.payu_money.AppEnvironment;
 import prasad.com.gamespaisa.payu_money.AppPreference;
@@ -44,7 +45,7 @@ public class AddMoneyFragment extends Fragment implements View.OnClickListener {
     private String merchantKey, userCredentials;
     private Button bt_add_money;
     User user;
-
+    UpdateWalletBalance updateWalletBalance;
     @Nullable
     @Override
    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -243,7 +244,7 @@ public class AddMoneyFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("MainActivity", "request code " + requestCode + " resultcode " + resultCode);
+        Log.d("OnActivityResult", "request code " + requestCode + " resultcode " + resultCode);
         if (requestCode == PayUmoneyFlowManager.REQUEST_CODE_PAYMENT && resultCode == getActivity().RESULT_OK && data !=
                 null) {
             TransactionResponse transactionResponse = data.getParcelableExtra(PayUmoneyFlowManager
@@ -268,6 +269,7 @@ public class AddMoneyFragment extends Fragment implements View.OnClickListener {
                         String status=jsonObject.getString("status");
                         if(status.equals("success")){
                             updateWalletMoney(et_amount_value.getText().toString());
+                            updateWalletBalance.updateWalletBalance(et_amount_value.getText().toString());
                         }
                        // updateCart(user.getUserid(),eventModel.getId(),txn_d);
                     } catch (JSONException e) {
@@ -309,4 +311,7 @@ public class AddMoneyFragment extends Fragment implements View.OnClickListener {
     }
 
 
+   public void setWalletBalance(UpdateWalletBalance updateWalletBalance){
+        this.updateWalletBalance=updateWalletBalance;
+   }
 }

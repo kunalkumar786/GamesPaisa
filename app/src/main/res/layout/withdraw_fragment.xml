@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_withdraw_to_wallet"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dim_20"
+        android:layout_marginTop="@dimen/dim_10"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/with_draw_to_paytm_wallet"
+        android:layout_height="wrap_content" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_below="@+id/tv_withdraw_to_wallet"
+    android:layout_marginTop="@dimen/dim_30"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dim_30"
+        android:paddingStart="@dimen/dim_30"
+        android:paddingEnd="@dimen/dim_30"
+        android:id="@+id/ll_mobile"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_title"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="+91"
+            android:layout_gravity="top"
+            android:textSize="@dimen/dim_20"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="#c5c5c5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/et_amount_value"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:hint="Paytm Number"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                 />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dim_30"
+        android:paddingStart="@dimen/dim_30"
+        android:paddingEnd="@dimen/dim_30"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/ll_paytm_number"
+        android:layout_height="@dimen/dim_60">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_amount_to_with_draw"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="@string/rs_symbol"
+            android:layout_gravity="top"
+            android:textSize="@dimen/dim_20"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="#c5c5c5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/et_amount_to_withdraw"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:hint="Amount to Withdraw"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                 />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
+        android:text="Withdraw"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:layout_marginRight="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_30"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bt_add_money"
+        />
+
+
+
+
+</RelativeLayout>

@@ -12,7 +12,17 @@
          android:layout_width="match_parent"
          android:layout_height="match_parent">-->
 
-
+  <LinearLayout
+      android:layout_marginTop="@dimen/dim_30"
+      android:paddingStart="@dimen/dim_30"
+      android:paddingEnd="@dimen/dim_30"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dim_60">
+  <android.support.design.widget.TextInputLayout
+      android:textColorHint="#c5c5c5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
 
 <EditText
     android:layout_width="match_parent"
@@ -20,12 +30,16 @@
     android:layout_marginBottom="@dimen/dim_10"
     android:layout_marginTop="@dimen/dim_20"
     android:layout_marginLeft="@dimen/dim_10"
+    android:inputType="number"
     android:layout_marginRight="@dimen/dim_10"
-    android:text="20"
+    android:hint="Amount to Add"
     android:layout_height="wrap_content"
+    android:background="@drawable/selector_bg_edit"
+    android:textCursorDrawable="@drawable/bg_input_cursor"
     tools:ignore="MissingConstraints" />
 
-
+  </android.support.design.widget.TextInputLayout>
+  </LinearLayout>
 <Button
     android:layout_width="match_parent"
     android:layout_height="@dimen/dim_40"
