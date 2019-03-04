@@ -2,6 +2,7 @@ package prasad.com.gamespaisa.material;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -14,10 +15,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.transition.Explode;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -47,10 +50,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
      EditText et_password;
 
-     Button bt_go;
+     Button bt_go,bt_add_money;
 
      CardView cv;
-
+      TextView tv_forget_password;
      FloatingActionButton fab;
 
     @Override
@@ -60,11 +63,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         et_username=(EditText)findViewById(R.id.et_username);
         et_password=(EditText)findViewById(R.id.et_password);
+        tv_forget_password=(TextView)findViewById(R.id.tv_forget_password);
         bt_go=(Button)findViewById(R.id.bt_go);
+        bt_add_money=(Button)findViewById(R.id.bt_add_money);
         cv=(CardView)findViewById(R.id.cv);
         fab=(FloatingActionButton)findViewById(R.id.fab);
         fab.setOnClickListener(this);
         bt_go.setOnClickListener(this);
+        tv_forget_password.setOnClickListener(this);
 
     }
 
@@ -108,6 +114,9 @@ public void callLogin(User user){
                     user1.setEmail(response_val.getJSONObject("data").getJSONObject("value").getString("email"));
                     user1.setMobile(response_val.getJSONObject("data").getJSONObject("value").getString("contact"));
                     user1.setCity(response_val.getJSONObject("data").getJSONObject("value").getString("city"));
+                    user1.setWallet(response_val.getJSONObject("data").getJSONObject("value").getString("finalAmount"));
+                    user1.setEvent_joined(response_val.getJSONObject("data").getJSONObject("value").getString("event_purchage"));
+
                     user1.setProfile_pic(new File("" + response_val.getString("image_url")));
                     user1.setIsLogin("true");
 
@@ -166,9 +175,57 @@ public void callLogin(User user){
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class), options.toBundle());
 
                 break;
+            case R.id.tv_forget_password:
+                showDialog();
+                break;
 
 
         }
 
+    }
+
+public void showDialog(){
+    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+// ...Irrelevant code for customizing the buttons and title
+    LayoutInflater inflater = this.getLayoutInflater();
+    final View dialogView = inflater.inflate(R.layout.alert_label_editor, null);
+    dialogBuilder.setView(dialogView);
+    final AlertDialog alertDialog = dialogBuilder.create();
+    final EditText editText = (EditText) dialogView.findViewById(R.id.et_amount_value);
+    bt_add_money=(Button)dialogView.findViewById(R.id.bt_add_money);
+    bt_add_money.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            callforgotPassword(editText.getText().toString());
+            alertDialog.dismiss();
+        }
+    });
+
+    alertDialog.show();
+}
+public void callforgotPassword(String email_id){
+    Api_interface apiService = ApiClient.getClient().create(Api_interface.class);
+    Call<JsonElement> call=apiService.forgotPassword(email_id);
+    call.enqueue(new Callback<JsonElement>() {
+    @Override
+    public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+        try {
+            JSONObject jsonObject = new JSONObject("" + new Gson().toJson(response.body()));
+            Log.e("JSonObject",""+jsonObject);
+            if(jsonObject.getString("message").equals("New password send to register email.")){
+                Toast.makeText(LoginActivity.this,"New password send to register email.",Toast.LENGTH_LONG).show();
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void onFailure(Call<JsonElement> call, Throwable t) {
+
+    }
+    });
     }
 }
