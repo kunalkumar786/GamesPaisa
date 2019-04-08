@@ -37,7 +37,7 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
         Glide.with(context).load(participant_data.get(i).getImage_url()).into(myHolder.thumbnail);
-        myHolder.title.setText(participant_data.get(i).getTitle());
+        myHolder.title.setText(participant_data.get(i).getGame_username());
         myHolder.tv_description_value.setText(participant_data.get(i).getDescription());
     }
 
@@ -54,7 +54,7 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
             super(itemView);
             thumbnail=(ImageView)itemView.findViewById(R.id.thumbnail);
             title=(TextView)itemView.findViewById(R.id.title);
-            tv_description_value=(TextView)itemView.findViewById(R.id.tv_description_value);
+            tv_description_value=(TextView)itemView.findViewById(R.id.tv_description_past_value);
         }
 
     }
